@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cdbrteafiledp"]
+
+[ext_resource type="Texture2D" uid="uid://c0dprlkcx36ot" path="res://Assets/Sprites/Desain 1 Aksa.png" id="1_6cd4h"]
+[ext_resource type="Script" uid="uid://3vr8xewho4mx" path="res://Assets/Sripts/player_controller.gd" id="1_7dd06"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ql73s"]
+radius = 17.0
+height = 64.0
+
+[node name="Player" type="CharacterBody2D" unique_id=2042776985]
+script = ExtResource("1_7dd06")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=347059076]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1049752424]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D" unique_id=1790041607]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=607698137]
+position = Vector2(25, 34)
+scale = Vector2(2.375, 2.109375)
+texture = ExtResource("1_6cd4h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1842739683]
+position = Vector2(21, 33)
+shape = SubResource("CapsuleShape2D_ql73s")
