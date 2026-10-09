@@ -1,7 +1,11 @@
 extends Label
 @onready var timer: Timer = $Timer
 
+<<<<<<< HEAD
 var countdown: int = 10000000000000000
+=======
+var countdown: int = 10
+>>>>>>> de16230786e73f4f2e505dd396c854cb310e6694
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	text = str(countdown)
