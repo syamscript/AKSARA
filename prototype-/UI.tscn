@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://ya6jb4wuk4iw"]
+
+[ext_resource type="Texture2D" uid="uid://efryty7jml5f" path="res://Cuplikan layar 2026-10-09 183013.png" id="1_3b2b5"]
+[ext_resource type="FontFile" uid="uid://b4bh8buamcl5q" path="res://Acadian_Runes-Regular_PERSONAL_USE.ttf" id="2_g6l6n"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6sywf"]
+texture = ExtResource("1_3b2b5")
+modulate_color = Color(0.45364925, 0.45364925, 0.45364925, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44xos"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.075759135, 0.075759135, 0.075759135, 1)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e86os"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.075759135, 0.075759135, 0.075759135, 1)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oaxwk"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+shadow_size = 6
+
+[node name="MainMenu" type="Control" unique_id=1640726608]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1942257676]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6sywf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=504989452]
+layout_mode = 0
+offset_left = 431.0
+offset_top = 287.0
+offset_right = 736.0
+offset_bottom = 391.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 6
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1623839400]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_44xos")
+text = "Start"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1695017617]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_e86os")
+text = "Start"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1975318335]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_oaxwk")
+text = "Start"
+
+[node name="Label" type="Label" parent="." unique_id=1634402324]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -227.5
+offset_top = 136.0
+offset_right = 227.5
+offset_bottom = 281.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.7413849, 0.7413845, 0.7413848, 1)
+theme_override_fonts/font = ExtResource("2_g6l6n")
+theme_override_font_sizes/font_size = 100
+text = "A K S A R A"
+vertical_alignment = 1

@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:prototype-(copy)/Desain 1 Aksa.png.import
-uid="uid://doixhvfbolpdt"
-path="res://.godot/imported/Desain 1 Aksa.png-005a8b31c41e30972e94394eb26965a8.ctex"
-========
 uid="uid://crgv8mo5bxqak"
 path="res://.godot/imported/1.png-dd1b46c9319cccd8c63de96ba28b9040.ctex"
->>>>>>>> parent of 953a3f5 (Merge pull request #1 from syamscript/feature/player-movement):prototype/Assets/Character/Player/Idle/1.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:prototype-(copy)/Desain 1 Aksa.png.import
-source_file="res://Desain 1 Aksa.png"
-dest_files=["res://.godot/imported/Desain 1 Aksa.png-005a8b31c41e30972e94394eb26965a8.ctex"]
-========
 source_file="res://Assets/Character/Player/Idle/1.png"
 dest_files=["res://.godot/imported/1.png-dd1b46c9319cccd8c63de96ba28b9040.ctex"]
->>>>>>>> parent of 953a3f5 (Merge pull request #1 from syamscript/feature/player-movement):prototype/Assets/Character/Player/Idle/1.png.import
 
 [params]
 
