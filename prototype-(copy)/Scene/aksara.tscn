@@ -8,9 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://bk8qbprpsx3rq" path="res://Assets/Character/Player/Idle/3.png" id="3_kfi1m"]
 [ext_resource type="Texture2D" uid="uid://cxx08khmsx02l" path="res://Desain 1 Aksa-Sheet.png" id="4_3ttjm"]
 [ext_resource type="Texture2D" uid="uid://drkcyqit6mqwy" path="res://IMG_20261011_221537.png" id="4_5bfu0"]
+[ext_resource type="Texture2D" uid="uid://if7w8enq36ri" path="res://Desain 1 Aksa - Salin.png" id="4_b11gu"]
 [ext_resource type="Texture2D" uid="uid://botkvy104awrm" path="res://Assets/Character/Player/Idle/4.png" id="4_x7sll"]
 [ext_resource type="Texture2D" uid="uid://d0c68niic1ao3" path="res://Assets/Character/Player/Idle/5.png" id="5_toq6l"]
 [ext_resource type="Texture2D" uid="uid://dimx4qxxobbbi" path="res://Assets/Character/Player/Idle/6.png" id="6_48g0k"]
+[ext_resource type="Texture2D" uid="uid://doixhvfbolpdt" path="res://Desain 1 Aksa.png" id="6_wixm3"]
 [ext_resource type="Texture2D" uid="uid://df37cofouhkxg" path="res://Assets/Character/Player/Idle/7.png" id="7_feq0f"]
 [ext_resource type="Texture2D" uid="uid://da468uqgh7bdg" path="res://Assets/Character/Player/Idle/8.png" id="8_ybve4"]
 [ext_resource type="Texture2D" uid="uid://cl1hp10oly0tb" path="res://Assets/Character/Player/Idle/9.png" id="9_iavb8"]
@@ -1164,6 +1166,9 @@ region = Rect2(224, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("4_b11gu")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_xs1es")
 }, {
 "duration": 1.0,
@@ -1192,6 +1197,9 @@ animations = [{
 "speed": 10.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_wixm3")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5bfu0")
 }, {
@@ -1398,8 +1406,8 @@ texture_filter = 1
 position = Vector2(116.666664, 160)
 scale = Vector2(2.7083328, 2.4501493)
 sprite_frames = SubResource("SpriteFrames_6sywf")
-animation = &"walk_R"
-frame_progress = 0.23073934
+animation = &"walk_L"
+frame_progress = 0.2891815
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=618054987]
 visible = false
