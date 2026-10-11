@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://bitmnqjkvqyjt"]
+
+[ext_resource type="Texture2D" uid="uid://gno20c33hmvh" path="res://Tileset/Final/Final/Background_0.png" id="1_mae5d"]
+[ext_resource type="FontFile" uid="uid://bbm7g7kihvorj" path="res://OriginTech personal use.ttf" id="2_4hy44"]
+[ext_resource type="FontFile" uid="uid://bvdillf2j5sk3" path="res://Digital Glitch Demo.ttf" id="3_ytr4m"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_44xos"]
+texture = ExtResource("1_mae5d")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6im2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fi0w8"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2n0u"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Control" type="Control" unique_id=1545644199]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1825807012]
+modulate = Color(0.6556657, 0.6556657, 0.6556657, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_44xos")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=165128091]
+layout_mode = 0
+offset_left = 687.0
+offset_top = 325.0
+offset_right = 1101.0
+offset_bottom = 594.0
+theme_override_constants/separation = 15
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=544940513]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 0.5294118)
+theme_override_fonts/font = ExtResource("2_4hy44")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxFlat_b6im2")
+text = "Start"
+
+[node name="Button4" type="Button" parent="VBoxContainer" unique_id=1661390463]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7984459, 0.7984459, 0.7984459, 0.5764706)
+theme_override_fonts/font = ExtResource("2_4hy44")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxFlat_b6im2")
+text = "Load"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1016369837]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 0.5294118)
+theme_override_fonts/font = ExtResource("2_4hy44")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxFlat_fi0w8")
+text = "Settings"
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1190021975]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 0.5294118)
+theme_override_fonts/font = ExtResource("2_4hy44")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxFlat_a2n0u")
+text = "Exit"
+
+[node name="Label" type="Label" parent="." unique_id=994207373]
+layout_mode = 0
+offset_left = 363.0
+offset_top = 97.0
+offset_right = 1127.0
+offset_bottom = 256.0
+theme_override_colors/font_color = Color(0.7977293, 0.7977293, 0.7977293, 0.2627451)
+theme_override_fonts/font = ExtResource("3_ytr4m")
+theme_override_font_sizes/font_size = 50
+text = "A K S A R A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=1372525179]
+layout_mode = 0
+offset_left = 356.0
+offset_top = 88.0
+offset_right = 1120.0
+offset_bottom = 247.0
+theme_override_colors/font_color = Color(0.59, 0.59, 0.59, 1)
+theme_override_fonts/font = ExtResource("3_ytr4m")
+theme_override_font_sizes/font_size = 50
+text = "A K S A R A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1370508671]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 583.0
+offset_right = 294.0
+offset_bottom = 621.0
+text = "version"
+vertical_alignment = 1
