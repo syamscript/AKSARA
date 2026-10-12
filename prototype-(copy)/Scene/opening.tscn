@@ -1,0 +1,353 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Script/opening.gd" id="1_t52o3"]
+[ext_resource type="Texture2D" path="res://CraftPix/Clouds/Clouds 3/1.png" id="2_emxwb"]
+[ext_resource type="Texture2D" path="res://CraftPix/Clouds/Clouds 3/2.png" id="3_wep7f"]
+[ext_resource type="Texture2D" path="res://CraftPix/Clouds/Clouds 3/3.png" id="4_gnxbj"]
+[ext_resource type="Texture2D" path="res://CraftPix/Clouds/Clouds 3/4.png" id="5_8wpmx"]
+[ext_resource type="FontFile" path="res://OriginTech personal use.ttf" id="6_m5aml"]
+[ext_resource type="FontFile" path="res://Digital Glitch Demo.ttf" id="7_eh1y6"]
+
+[sub_resource type="Environment" id="Environment_nxcy4"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 0.8
+glow_bloom = 0.15
+glow_blend_mode = 0
+glow_hdr_threshold = 0.8
+
+[sub_resource type="Gradient" id="Gradient_8pitk"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(0.31, 0.94, 0.96, 0.18, 0.18, 0.37, 0.82, 0.06, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8fmc8"]
+gradient = SubResource("Gradient_8pitk")
+width = 256
+height = 180
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ixwb7"]
+emission_shape = 3
+emission_box_extents = Vector3(288, 162, 0)
+direction = Vector3(0, -1, 0)
+spread = 25.0
+initial_velocity_min = 2.0
+initial_velocity_max = 5.0
+gravity = Vector3(0, -1, 0)
+color = Color(0.31, 0.94, 0.96, 0.4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kgq37"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mcu8m"]
+content_margin_left = 4.0
+content_margin_top = 2.0
+content_margin_right = 4.0
+content_margin_bottom = 2.0
+bg_color = Color(0.31, 0.94, 0.96, 0.08)
+border_width_left = 2
+border_color = Color(0.30980393, 0.9411765, 0.9607843, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_utogu"]
+bg_color = Color(0.078431375, 0.078431375, 0.2, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.30980393, 0.9411765, 0.9607843, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="Opening" type="Node2D" unique_id=1828580336]
+script = ExtResource("1_t52o3")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=85635345]
+environment = SubResource("Environment_nxcy4")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1820073864]
+position = Vector2(0, -130)
+anchor_mode = 0
+
+[node name="BackgroundSky" type="ColorRect" parent="." unique_id=2091869366]
+offset_left = -300.0
+offset_top = -500.0
+offset_right = 900.0
+offset_bottom = 700.0
+color = Color(0.078431375, 0.078431375, 0.2, 1)
+
+[node name="Parallax2D_Langit" type="Parallax2D" parent="." unique_id=482024612]
+scroll_scale = Vector2(0.05, 0.08)
+repeat_size = Vector2(576, 0)
+autoscroll = Vector2(-1.5, 0)
+repeat_times = 3
+
+[node name="SpriteLangit" type="Sprite2D" parent="Parallax2D_Langit" unique_id=1938850692]
+texture = ExtResource("2_emxwb")
+centered = false
+
+[node name="Parallax2D_Bulan" type="Parallax2D" parent="." unique_id=2106684865]
+scroll_scale = Vector2(0.1, 0.15)
+
+[node name="SpriteBulan" type="Sprite2D" parent="Parallax2D_Bulan" unique_id=1116155009]
+modulate = Color(1.3, 1.8, 2, 1)
+texture = ExtResource("3_wep7f")
+centered = false
+
+[node name="MistGlow" type="Sprite2D" parent="." unique_id=2046181787]
+position = Vector2(288, 170)
+texture = SubResource("GradientTexture2D_8fmc8")
+
+[node name="Parallax2D_AwanTengah" type="Parallax2D" parent="." unique_id=972836015]
+scroll_scale = Vector2(0.35, 0.5)
+repeat_size = Vector2(576, 0)
+autoscroll = Vector2(-5, 0)
+repeat_times = 3
+
+[node name="SpriteAwanTengah" type="Sprite2D" parent="Parallax2D_AwanTengah" unique_id=1302152102]
+texture = ExtResource("4_gnxbj")
+centered = false
+
+[node name="Parallax2D_AwanDepan" type="Parallax2D" parent="." unique_id=1153877690]
+scroll_scale = Vector2(0.65, 0.8)
+repeat_size = Vector2(576, 0)
+autoscroll = Vector2(-12, 0)
+repeat_times = 3
+
+[node name="SpriteAwanDepan" type="Sprite2D" parent="Parallax2D_AwanDepan" unique_id=193517416]
+texture = ExtResource("5_8wpmx")
+centered = false
+
+[node name="GPUParticles2D_Bintang" type="GPUParticles2D" parent="." unique_id=1555418536]
+position = Vector2(288, 162)
+amount = 25
+lifetime = 6.0
+preprocess = 3.0
+process_material = SubResource("ParticleProcessMaterial_ixwb7")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1044286996]
+layer = 10
+
+[node name="Splash" type="Control" parent="UI" unique_id=11575294]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="SplashBG" type="ColorRect" parent="UI/Splash" unique_id=1234148568]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.078431375, 0.078431375, 0.2, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="UI/Splash" unique_id=29638584]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Splash/CenterContainer" unique_id=397097904]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="StudioLabel" type="Label" parent="UI/Splash/CenterContainer/VBoxContainer" unique_id=544842932]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_m5aml")
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.8666667, 0.9647059, 1, 1)
+text = "CHILL CHAMBER"
+horizontal_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="UI/Splash/CenterContainer/VBoxContainer" unique_id=824621895]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_m5aml")
+theme_override_font_sizes/font_size = 10
+theme_override_colors/font_color = Color(0.30588236, 0.6039216, 0.65882355, 1)
+text = "MEMPERSEMBAHKAN"
+horizontal_alignment = 1
+
+[node name="TitleContainer" type="Control" parent="UI" unique_id=1279280527]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 44.0
+offset_right = 576.0
+offset_bottom = 124.0
+
+[node name="LogoShadow" type="Label" parent="UI/TitleContainer" unique_id=1131577361]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 577.0
+offset_bottom = 51.0
+theme_override_fonts/font = ExtResource("7_eh1y6")
+theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(0.1, 0.25, 0.55, 0.6)
+text = "A K S A R A"
+horizontal_alignment = 1
+
+[node name="LogoLabel" type="Label" parent="UI/TitleContainer" unique_id=1763901289]
+layout_mode = 0
+offset_right = 576.0
+offset_bottom = 50.0
+theme_override_fonts/font = ExtResource("7_eh1y6")
+theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(0.8666667, 0.9647059, 1, 1)
+text = "A K S A R A"
+horizontal_alignment = 1
+
+[node name="GenreLabel" type="Label" parent="UI/TitleContainer" unique_id=1579603583]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 576.0
+offset_bottom = 71.0
+theme_override_fonts/font = ExtResource("6_m5aml")
+theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(0.30588236, 0.6039216, 0.65882355, 1)
+text = "NUSANTARA SCI-FI ADVENTURE"
+horizontal_alignment = 1
+
+[node name="Menu" type="VBoxContainer" parent="UI" unique_id=187535070]
+offset_left = 198.0
+offset_top = 136.0
+offset_right = 378.0
+offset_bottom = 296.0
+theme_override_constants/separation = 4
+
+[node name="BtnMulai" type="Button" parent="UI/Menu" unique_id=1958761910]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_kgq37")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mcu8m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mcu8m")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mcu8m")
+theme_override_colors/font_color = Color(0.30588236, 0.6039216, 0.65882355, 1)
+theme_override_colors/font_focus_color = Color(0.30980393, 0.9411765, 0.9607843, 1)
+theme_override_colors/font_hover_color = Color(0.30980393, 0.9411765, 0.9607843, 1)
+theme_override_fonts/font = ExtResource("6_m5aml")
+theme_override_font_sizes/font_size = 12
+text = "◆ MULAI"
+
+[node name="BtnLanjutkan" type="Button" parent="UI/Menu" unique_id=96039515]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_kgq37")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mcu8m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mcu8m")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mcu8m")
+theme_override_colors/font_color = Color(0.30588236, 0.6039216, 0.65882355, 1)
+theme_override_colors/font_focus_color = Color(0.30980393, 0.9411765, 0.9607843, 1)
+theme_override_colors/font_hover_color = Color(0.30980393, 0.9411765, 0.9607843, 1)
+theme_override_fonts/font = ExtResource("6_m5aml")
+theme_override_font_sizes/font_size = 12
+text = "   LANJUTKAN"
+
+[node name="BtnJurnal" type="Button" parent="UI/Menu" unique_id=1259156982]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_kgq37")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mcu8m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mcu8m")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mcu8m")
+theme_override_colors/font_color = Color(0.30588236, 0.6039216, 0.65882355, 1)
+theme_override_colors/font_focus_color = Color(0.30980393, 0.9411765, 0.9607843, 1)
+theme_override_colors/font_hover_color = Color(0.30980393, 0.9411765, 0.9607843, 1)
+theme_override_fonts/font = ExtResource("6_m5aml")
+theme_override_font_sizes/font_size = 12
+text = "   JURNAL"
+
+[node name="BtnPengaturan" type="Button" parent="UI/Menu" unique_id=1042611692]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_kgq37")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mcu8m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mcu8m")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mcu8m")
+theme_override_colors/font_color = Color(0.30588236, 0.6039216, 0.65882355, 1)
+theme_override_colors/font_focus_color = Color(0.30980393, 0.9411765, 0.9607843, 1)
+theme_override_colors/font_hover_color = Color(0.30980393, 0.9411765, 0.9607843, 1)
+theme_override_fonts/font = ExtResource("6_m5aml")
+theme_override_font_sizes/font_size = 12
+text = "   PENGATURAN"
+
+[node name="BtnKeluar" type="Button" parent="UI/Menu" unique_id=295726467]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_kgq37")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mcu8m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mcu8m")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mcu8m")
+theme_override_colors/font_color = Color(0.30588236, 0.6039216, 0.65882355, 1)
+theme_override_colors/font_focus_color = Color(0.30980393, 0.9411765, 0.9607843, 1)
+theme_override_colors/font_hover_color = Color(0.30980393, 0.9411765, 0.9607843, 1)
+theme_override_fonts/font = ExtResource("6_m5aml")
+theme_override_font_sizes/font_size = 12
+text = "   KELUAR"
+
+[node name="VersionLabel" type="Label" parent="UI" unique_id=125087169]
+offset_left = 12.0
+offset_top = 304.0
+offset_right = 160.0
+offset_bottom = 320.0
+theme_override_fonts/font = ExtResource("6_m5aml")
+theme_override_font_sizes/font_size = 7
+theme_override_colors/font_color = Color(0.31, 0.6, 0.66, 0.7)
+text = "v0.1.0 • PROTOTYPE"
+
+[node name="ModalPopup" type="Control" parent="UI" unique_id=1634386848]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ModalBG" type="ColorRect" parent="UI/ModalPopup" unique_id=474084575]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.04, 0.04, 0.12, 0.82)
+
+[node name="Panel" type="Panel" parent="UI/ModalPopup" unique_id=58318107]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 70.0
+offset_right = 448.0
+offset_bottom = 254.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_utogu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/ModalPopup/Panel" unique_id=1959007284]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 304.0
+offset_bottom = 168.0
+theme_override_constants/separation = 10
+
+[node name="ModalTitle" type="Label" parent="UI/ModalPopup/Panel/VBoxContainer" unique_id=1173118036]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_m5aml")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.30980393, 0.9411765, 0.9607843, 1)
+text = "INFO"
+horizontal_alignment = 1
+
+[node name="ModalBody" type="Label" parent="UI/ModalPopup/Panel/VBoxContainer" unique_id=570939509]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_m5aml")
+theme_override_font_sizes/font_size = 9
+theme_override_colors/font_color = Color(0.8666667, 0.9647059, 1, 1)
+text = "Konten informasi dialog modal."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="BtnModalTutup" type="Button" parent="UI/ModalPopup/Panel/VBoxContainer" unique_id=1254730355]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_kgq37")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mcu8m")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mcu8m")
+theme_override_colors/font_color = Color(0.30980393, 0.9411765, 0.9607843, 1)
+theme_override_fonts/font = ExtResource("6_m5aml")
+theme_override_font_sizes/font_size = 11
+text = "◆ KEMBALI"
+
+[node name="Fade" type="ColorRect" parent="UI" unique_id=1687377780]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
