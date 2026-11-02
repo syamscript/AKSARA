@@ -22,13 +22,13 @@ func _physics_process(delta: float) -> void:
 		#player_ui.animation = "jump"
 
 	# Handle jump (termasuk double jump).
-	if Input.is_action_just_pressed("ui_accept") and jump_count < MAX_JUMPS:
+	if Input.is_action_just_pressed("lompat") and jump_count < MAX_JUMPS:
 		velocity.y = JUMP_VELOCITY
 		jump_count += 1
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
+	var direction := Input.get_axis("kiri", "kanan")
 	if direction < 0:
 		facing = "walk_L"
 		player_ui.play("walk_L")
